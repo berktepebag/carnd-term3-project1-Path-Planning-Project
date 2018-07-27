@@ -90,7 +90,7 @@ int NextWaypoint(double x, double y, double theta, const vector<double> &maps_x,
 
 // Transform from Cartesian x,y coordinates to Frenet s,d coordinates
 vector<double> getFrenet(double x, double y, double theta, const vector<double> &maps_x, const vector<double> &maps_y)
-    {
+{
   int next_wp = NextWaypoint(x,y, theta, maps_x,maps_y);
 
   int prev_wp;
@@ -135,11 +135,11 @@ vector<double> getFrenet(double x, double y, double theta, const vector<double> 
 
   return {frenet_s,frenet_d};
 
-    }
+}
 
 // Transform from Frenet s,d coordinates to Cartesian x,y
 vector<double> getXY(double s, double d, const vector<double> &maps_s, const vector<double> &maps_x, const vector<double> &maps_y)
-    {
+{
   int prev_wp = -1;
 
   while(s > maps_s[prev_wp+1] && (prev_wp < (int)(maps_s.size()-1) ))
@@ -163,13 +163,15 @@ vector<double> getXY(double s, double d, const vector<double> &maps_s, const vec
 
   return {x,y};
 
-    }
+}
 
 //start lane
 int lane = 1;
+int intended_lane = 1;
 
-double desired_speed = 49.5; //mile
-
+double desired_speed = 5.0; //mile
+bool changing_lane = false;
+bool safe_to_change = false;
 
 int main() {
   uWS::Hub h;
@@ -210,7 +212,7 @@ int main() {
 
 
   h.onMessage([&map_waypoints_x,&map_waypoints_y,&map_waypoints_s,&map_waypoints_dx,&map_waypoints_dy](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
-      uWS::OpCode opCode) {
+    uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
@@ -330,7 +332,10 @@ int main() {
           //namespace tk, class spline
           tk::spline s;
 
-          s.set_points(ptsx,ptsy,true);
+          try{s.set_points(ptsx,ptsy,true);}
+          catch(int e){
+            cout << "An exception occurred. Exception Nr. " << e << '\n';
+          }
 
           vector<double> next_x_vals;
           vector<double> next_y_vals;   
@@ -354,9 +359,8 @@ int main() {
           double  x_add_on = 0;
 
           //cout << "For will turn: " << ceil(desired_speed)-previous_path_x.size() << endl;
-
-          //Instead of using static 50, I prefered a relation between velocity of the car
-          for (int i = 1; i <= ceil(desired_speed)-previous_path_x.size(); i++)
+          
+          for (int i = 1; i <= 50-previous_path_x.size(); i++)
           {
             double N = (target_dist/(0.02*desired_speed/2.24));
             double x_point = x_add_on+(target_x/N);
@@ -378,47 +382,104 @@ int main() {
             next_y_vals.push_back(y_point);
           }    
 
-          bool probabl_collision_detected = false;
-
+          bool possible_front_collision_detected = false;
+          bool possible_back_collision_detected = false;
           
+          vector< vector<double> > other_cars;
         //Check if our waypoints collide with another car!
           for(int i = 0; i < sensor_fusion.size(); i++)
           {              
+            other_cars.push_back(sensor_fusion[i]);
             double other_cars_d = sensor_fusion[i][6];
 
+            //Are we in the same lane?
             double dist_d = fabs(car_d - other_cars_d);
 
-            if(dist_d<0.5){
-              double other_cars_x = sensor_fusion[i][1];
-              double other_cars_y = sensor_fusion[i][2];
-              //double other_cars_s = sensor_fusion[i][5];
+            if(dist_d<0.5){        
 
-              double dist = distance(other_cars_x,other_cars_y,car_x,car_y);
+              double other_cars_s = sensor_fusion[i][5];
+              double dist = other_cars_s - car_s; //Make distance with the car infront positive           
+              //cout << "dist: " << dist << endl;   
 
-              if(dist<30){
-                probabl_collision_detected = true;
-                cout << "collision detected id: " << sensor_fusion[i] << endl; 
-              //cout << "dist_d: " << dist_d <<endl;
-              //desired_speed = 29.5;       
-              //cout << "turning if" << endl;              
-              }    
+              if(dist>10 & dist<30){
+                possible_front_collision_detected = true;
+                //cout << "front collision detected to id: " << sensor_fusion[i] << endl;              
+              }else if(dist> -30 & dist < 0){
+                possible_back_collision_detected = true;
+                //cout << "back collision detected from id: " << sensor_fusion[i] << endl;   
+              }
+            }
+          }         
+
+          if (possible_front_collision_detected)
+          {
+            cout << "possible_front_collision_detected! changing_lane: " << changing_lane << endl;            
+            desired_speed -= 0.25;
+
+            if (!changing_lane)
+            {
+              safe_to_change = true;
+              cout << "safe_to_change: " << safe_to_change << endl;
+              //intended_lane = (lane+1)%3;
+
+              for(int i=0; i<other_cars.size(); i++){
+                //cout << "other cars: " << other_cars[i][0] << endl;    
+                double d_dist_ = fabs(other_cars[i][6]-(2+intended_lane*4));
+                double s_dist_ = fabs(other_cars[i][5] - car_s);       
+
+                //Do we have enough space to change lane? (All possible lanes)
+                if(s_dist_ > 3.0 & s_dist_ < 10.0){                                  
+
+                  //Is there any car at the intended lane?
+                  if(d_dist_ < 0.05){
+                    cout << "car at intended lane id: " <<other_cars[i][0] << " d_dist_: " << d_dist_ << " s_dist_: " << s_dist_ << endl;
+                    safe_to_change = true;
+                  }else{
+                    safe_to_change = false;
+                    //Try other lane!
+                    cout << "Intentded lane " << intended_lane <<" is not safe to change, trying lane: " << flush;
+                    intended_lane = (intended_lane+1)%3;
+                    cout << intended_lane << endl;
+                    
+                  }
+                }
+              }              
+              if(safe_to_change){
+                changing_lane = true;                
+              }            
             }
           }
-
-          if (probabl_collision_detected)
-          {
-            desired_speed -= 0.25;
+          else if(possible_back_collision_detected){
+            if(desired_speed<49.5){
+              desired_speed += 0.25;
+            }         
           }
           else if(desired_speed<49.5){
-
             desired_speed += 0.25;
+          } 
+
+          //*****************************************//
+          //*******Check if changing lane completed***//
+          
+          if(fabs(car_d-(2+intended_lane*4)) > 0.05 & changing_lane == true){
+            lane = intended_lane;
+          }else if( (fabs(car_d-(2+intended_lane*4)) < 0.05) & (changing_lane == true) ){
+            cout << "Change lane completed" << endl;
+            intended_lane = lane;
+            changing_lane = false;
           }
+          //cout << "desired_speed: " << desired_speed << endl;
+          cout << "lane: " << lane << endl;
+          cout << "intended lane: " << intended_lane << endl;  
+          cout << "changing_lane: " << changing_lane << endl;
+          cout << "**********************************" << endl;
 
 
 
 
 
-          cout << "desired_speed: " << desired_speed << endl;
+
+
 
 
           // TODO: define a path made up of (x,y) points that the car will visit sequentially every .02 seconds
@@ -442,34 +503,34 @@ int main() {
   // We don't need this since we're not using HTTP but if it's removed the
   // program
   // doesn't compile :-(
-  h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data,
-      size_t, size_t) {
-    const std::string s = "<h1>Hello world!</h1>";
-    if (req.getUrl().valueLength == 1) {
-      res->end(s.data(), s.length());
-    } else {
-      // i guess this should be done more gracefully?
-      res->end(nullptr, 0);
-    }
-  });
-
-  h.onConnection([&h](uWS::WebSocket<uWS::SERVER> ws, uWS::HttpRequest req) {
-    std::cout << "Connected!!!" << std::endl;
-  });
-
-  h.onDisconnection([&h](uWS::WebSocket<uWS::SERVER> ws, int code,
-      char *message, size_t length) {
-    ws.close();
-    std::cout << "Disconnected" << std::endl;
-  });
-
-  int port = 4567;
-  if (h.listen(port)) {
-    std::cout << "Listening to port " << port << std::endl;
+h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data,
+  size_t, size_t) {
+  const std::string s = "<h1>Hello world!</h1>";
+  if (req.getUrl().valueLength == 1) {
+    res->end(s.data(), s.length());
   } else {
-    std::cerr << "Failed to listen to port" << std::endl;
-    return -1;
+      // i guess this should be done more gracefully?
+    res->end(nullptr, 0);
   }
-  h.run();
+});
+
+h.onConnection([&h](uWS::WebSocket<uWS::SERVER> ws, uWS::HttpRequest req) {
+  std::cout << "Connected!!!" << std::endl;
+});
+
+h.onDisconnection([&h](uWS::WebSocket<uWS::SERVER> ws, int code,
+  char *message, size_t length) {
+  ws.close();
+  std::cout << "Disconnected" << std::endl;
+});
+
+int port = 4567;
+if (h.listen(port)) {
+  std::cout << "Listening to port " << port << std::endl;
+} else {
+  std::cerr << "Failed to listen to port" << std::endl;
+  return -1;
+}
+h.run();
 
 }

@@ -511,13 +511,13 @@ int main() {
           }          
 
           
-
+          int take_decisions = 20;
           //***********Take Decision according to the costs calculated********************//
-          //Avoid lane change first 200 frames, and decide change lane every 50 frames (50*20 milisec = 1 sec)
-          if(counter > 200 & counter % 50 == 0){ 
+          //Avoid lane change first 200 frames, and decide changing lane every take_decisionsx20 milisec
+          if(counter > 200 & counter % take_decisions == 0){ 
             changing_lane = false;
             //Decide but not move until next_move_counter satisfied
-            next_move_counter = counter + 10;
+            next_move_counter = counter + 2;
 
             intended_lane = min_pos;
 
@@ -551,7 +551,7 @@ int main() {
               cout << "*********Two Lane Movement!***********" << endl;
               if (cars_in_lanes[1] == 0)
               {
-                intended_lane = 1;
+                intended_lane = 1;                
               }else{
                 intended_lane = lane;}
               }
@@ -560,7 +560,7 @@ int main() {
               cout << "*********Two Lane Movement!***********" << endl;
               if (cars_in_lanes[1] == 0)
               {
-                intended_lane = 1;
+                intended_lane = 1;                
               }else{
                 intended_lane = lane;}
             }
@@ -577,7 +577,7 @@ int main() {
             {
               cout << "Until Next Move: " << next_move_counter-counter <<endl;
             }
-            if (counter == next_move_counter & car_speed < 35.0)
+            if (counter == next_move_counter & car_speed < 37.0)
             {
               lane = intended_lane;
             }
@@ -620,7 +620,7 @@ int main() {
               desired_speed -= 10/ratio;
             }            
           }   
-          else if (changing_lane & car_speed > 35.0)
+          else if (changing_lane & car_speed > 37.0)
           {
             desired_speed -= 0.254;
           }   

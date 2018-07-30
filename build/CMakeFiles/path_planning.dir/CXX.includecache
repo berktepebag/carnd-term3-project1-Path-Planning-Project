@@ -6,35 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Cholesky
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Cholesky
 Core
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
 src/Core/util/DisableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
 src/Cholesky/LLT.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LLT.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LLT.h
 src/Cholesky/LDLT.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LDLT.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LDLT.h
 src/misc/lapacke.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke.h
 src/Cholesky/LLT_LAPACKE.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LLT_LAPACKE.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LLT_LAPACKE.h
 src/Core/util/ReenableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
 src/Core/util/DisableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
 math_functions.hpp
 -
 new
 -
 src/Core/util/Macros.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Macros.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Macros.h
 complex
 -
 src/Core/util/MKL_support.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/MKL_support.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/MKL_support.h
 malloc.h
 -
 immintrin.h
@@ -102,613 +102,613 @@ iostream
 intrin.h
 -
 src/Core/util/Constants.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Constants.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Constants.h
 src/Core/util/Meta.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Meta.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Meta.h
 src/Core/util/ForwardDeclarations.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ForwardDeclarations.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ForwardDeclarations.h
 src/Core/util/StaticAssert.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/StaticAssert.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/StaticAssert.h
 src/Core/util/XprHelper.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/XprHelper.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/XprHelper.h
 src/Core/util/Memory.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Memory.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Memory.h
 src/Core/NumTraits.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NumTraits.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NumTraits.h
 src/Core/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MathFunctions.h
 src/Core/GenericPacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GenericPacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GenericPacketMath.h
 src/Core/MathFunctionsImpl.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MathFunctionsImpl.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MathFunctionsImpl.h
 src/Core/arch/SSE/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/PacketMath.h
 src/Core/arch/AVX/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/PacketMath.h
 src/Core/arch/AVX512/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX512/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX512/PacketMath.h
 src/Core/arch/AVX512/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX512/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX512/MathFunctions.h
 src/Core/arch/SSE/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/PacketMath.h
 src/Core/arch/SSE/Complex.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/Complex.h
 src/Core/arch/SSE/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/MathFunctions.h
 src/Core/arch/AVX/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/PacketMath.h
 src/Core/arch/AVX/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/MathFunctions.h
 src/Core/arch/AVX/Complex.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/Complex.h
 src/Core/arch/AVX/TypeCasting.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/TypeCasting.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/TypeCasting.h
 src/Core/arch/SSE/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/PacketMath.h
 src/Core/arch/SSE/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/MathFunctions.h
 src/Core/arch/SSE/Complex.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/Complex.h
 src/Core/arch/SSE/TypeCasting.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/TypeCasting.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/TypeCasting.h
 src/Core/arch/AltiVec/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/PacketMath.h
 src/Core/arch/AltiVec/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
 src/Core/arch/AltiVec/Complex.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/Complex.h
 src/Core/arch/NEON/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/PacketMath.h
 src/Core/arch/NEON/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/MathFunctions.h
 src/Core/arch/NEON/Complex.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/Complex.h
 src/Core/arch/ZVector/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/PacketMath.h
 src/Core/arch/ZVector/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/MathFunctions.h
 src/Core/arch/ZVector/Complex.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/Complex.h
 src/Core/arch/CUDA/Half.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/Half.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/Half.h
 src/Core/arch/CUDA/PacketMathHalf.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/PacketMathHalf.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/PacketMathHalf.h
 src/Core/arch/CUDA/TypeCasting.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/TypeCasting.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/TypeCasting.h
 src/Core/arch/CUDA/PacketMath.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/PacketMath.h
 src/Core/arch/CUDA/MathFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/MathFunctions.h
 src/Core/arch/Default/Settings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/Default/Settings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/Default/Settings.h
 src/Core/functors/TernaryFunctors.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/TernaryFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/TernaryFunctors.h
 src/Core/functors/BinaryFunctors.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/BinaryFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/BinaryFunctors.h
 src/Core/functors/UnaryFunctors.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/UnaryFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/UnaryFunctors.h
 src/Core/functors/NullaryFunctors.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/NullaryFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/NullaryFunctors.h
 src/Core/functors/StlFunctors.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/StlFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/StlFunctors.h
 src/Core/functors/AssignmentFunctors.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/AssignmentFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/AssignmentFunctors.h
 src/Core/arch/CUDA/Complex.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/Complex.h
 src/Core/IO.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/IO.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/IO.h
 src/Core/DenseCoeffsBase.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseCoeffsBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseCoeffsBase.h
 src/Core/DenseBase.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseBase.h
 src/Core/MatrixBase.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MatrixBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MatrixBase.h
 src/Core/EigenBase.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/EigenBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/EigenBase.h
 src/Core/Product.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Product.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Product.h
 src/Core/CoreEvaluators.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CoreEvaluators.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CoreEvaluators.h
 src/Core/AssignEvaluator.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/AssignEvaluator.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/AssignEvaluator.h
 src/Core/Assign.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Assign.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Assign.h
 src/Core/ArrayBase.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ArrayBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ArrayBase.h
 src/Core/util/BlasUtil.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/BlasUtil.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/BlasUtil.h
 src/Core/DenseStorage.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseStorage.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseStorage.h
 src/Core/NestByValue.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NestByValue.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NestByValue.h
 src/Core/ReturnByValue.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ReturnByValue.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ReturnByValue.h
 src/Core/NoAlias.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NoAlias.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NoAlias.h
 src/Core/PlainObjectBase.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/PlainObjectBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/PlainObjectBase.h
 src/Core/Matrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Matrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Matrix.h
 src/Core/Array.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Array.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Array.h
 src/Core/CwiseTernaryOp.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseTernaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseTernaryOp.h
 src/Core/CwiseBinaryOp.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseBinaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseBinaryOp.h
 src/Core/CwiseUnaryOp.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseUnaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseUnaryOp.h
 src/Core/CwiseNullaryOp.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseNullaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseNullaryOp.h
 src/Core/CwiseUnaryView.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseUnaryView.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseUnaryView.h
 src/Core/SelfCwiseBinaryOp.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SelfCwiseBinaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SelfCwiseBinaryOp.h
 src/Core/Dot.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Dot.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Dot.h
 src/Core/StableNorm.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/StableNorm.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/StableNorm.h
 src/Core/Stride.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Stride.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Stride.h
 src/Core/MapBase.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MapBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MapBase.h
 src/Core/Map.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Map.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Map.h
 src/Core/Ref.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Ref.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Ref.h
 src/Core/Block.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Block.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Block.h
 src/Core/VectorBlock.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/VectorBlock.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/VectorBlock.h
 src/Core/Transpose.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Transpose.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Transpose.h
 src/Core/DiagonalMatrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DiagonalMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DiagonalMatrix.h
 src/Core/Diagonal.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Diagonal.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Diagonal.h
 src/Core/DiagonalProduct.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DiagonalProduct.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DiagonalProduct.h
 src/Core/Redux.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Redux.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Redux.h
 src/Core/Visitor.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Visitor.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Visitor.h
 src/Core/Fuzzy.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Fuzzy.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Fuzzy.h
 src/Core/Swap.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Swap.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Swap.h
 src/Core/CommaInitializer.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CommaInitializer.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CommaInitializer.h
 src/Core/GeneralProduct.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GeneralProduct.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GeneralProduct.h
 src/Core/Solve.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Solve.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Solve.h
 src/Core/Inverse.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Inverse.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Inverse.h
 src/Core/SolverBase.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SolverBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SolverBase.h
 src/Core/PermutationMatrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/PermutationMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/PermutationMatrix.h
 src/Core/Transpositions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Transpositions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Transpositions.h
 src/Core/TriangularMatrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/TriangularMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/TriangularMatrix.h
 src/Core/SelfAdjointView.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SelfAdjointView.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SelfAdjointView.h
 src/Core/products/GeneralBlockPanelKernel.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
 src/Core/products/Parallelizer.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/Parallelizer.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/Parallelizer.h
 src/Core/ProductEvaluators.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ProductEvaluators.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ProductEvaluators.h
 src/Core/products/GeneralMatrixVector.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixVector.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixVector.h
 src/Core/products/GeneralMatrixMatrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrix.h
 src/Core/SolveTriangular.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SolveTriangular.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SolveTriangular.h
 src/Core/products/GeneralMatrixMatrixTriangular.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
 src/Core/products/SelfadjointMatrixVector.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixVector.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixVector.h
 src/Core/products/SelfadjointMatrixMatrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
 src/Core/products/SelfadjointProduct.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointProduct.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointProduct.h
 src/Core/products/SelfadjointRank2Update.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointRank2Update.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointRank2Update.h
 src/Core/products/TriangularMatrixVector.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixVector.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixVector.h
 src/Core/products/TriangularMatrixMatrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixMatrix.h
 src/Core/products/TriangularSolverMatrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverMatrix.h
 src/Core/products/TriangularSolverVector.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverVector.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverVector.h
 src/Core/BandMatrix.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/BandMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/BandMatrix.h
 src/Core/CoreIterators.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CoreIterators.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CoreIterators.h
 src/Core/ConditionEstimator.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ConditionEstimator.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ConditionEstimator.h
 src/Core/BooleanRedux.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/BooleanRedux.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/BooleanRedux.h
 src/Core/Select.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Select.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Select.h
 src/Core/VectorwiseOp.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/VectorwiseOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/VectorwiseOp.h
 src/Core/Random.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Random.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Random.h
 src/Core/Replicate.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Replicate.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Replicate.h
 src/Core/Reverse.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Reverse.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Reverse.h
 src/Core/ArrayWrapper.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ArrayWrapper.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ArrayWrapper.h
 src/Core/products/GeneralMatrixMatrix_BLAS.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h
 src/Core/products/GeneralMatrixVector_BLAS.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h
 src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
 src/Core/products/SelfadjointMatrixMatrix_BLAS.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h
 src/Core/products/SelfadjointMatrixVector_BLAS.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h
 src/Core/products/TriangularMatrixMatrix_BLAS.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h
 src/Core/products/TriangularMatrixVector_BLAS.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h
 src/Core/products/TriangularSolverMatrix_BLAS.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h
 src/Core/Assign_MKL.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Assign_MKL.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Assign_MKL.h
 src/Core/GlobalFunctions.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GlobalFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GlobalFunctions.h
 src/Core/util/ReenableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Householder
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Householder
 Core
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
 src/Core/util/DisableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
 src/Householder/Householder.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/Householder.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/Householder.h
 src/Householder/HouseholderSequence.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/HouseholderSequence.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/HouseholderSequence.h
 src/Householder/BlockHouseholder.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/BlockHouseholder.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/BlockHouseholder.h
 src/Core/util/ReenableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Jacobi
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Jacobi
 Core
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
 src/Core/util/DisableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
 src/Jacobi/Jacobi.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Jacobi/Jacobi.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Jacobi/Jacobi.h
 src/Core/util/ReenableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/QR
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/QR
 Core
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
 src/Core/util/DisableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
 Cholesky
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Cholesky
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Cholesky
 Jacobi
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Jacobi
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Jacobi
 Householder
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Householder
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Householder
 src/QR/HouseholderQR.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/HouseholderQR.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/HouseholderQR.h
 src/QR/FullPivHouseholderQR.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/FullPivHouseholderQR.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/FullPivHouseholderQR.h
 src/QR/ColPivHouseholderQR.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/ColPivHouseholderQR.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/ColPivHouseholderQR.h
 src/QR/CompleteOrthogonalDecomposition.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/CompleteOrthogonalDecomposition.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/CompleteOrthogonalDecomposition.h
 src/misc/lapacke.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke.h
 src/QR/HouseholderQR_LAPACKE.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/HouseholderQR_LAPACKE.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/HouseholderQR_LAPACKE.h
 src/QR/ColPivHouseholderQR_LAPACKE.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h
 src/Core/util/ReenableStupidWarnings.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LDLT.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LDLT.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LLT.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LLT.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LLT_LAPACKE.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Cholesky/LLT_LAPACKE.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Array.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Array.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ArrayBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ArrayBase.h
 ../plugins/CommonCwiseUnaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseUnaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseUnaryOps.h
 ../plugins/MatrixCwiseUnaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 ../plugins/ArrayCwiseUnaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/ArrayCwiseUnaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/ArrayCwiseUnaryOps.h
 ../plugins/CommonCwiseBinaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseBinaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseBinaryOps.h
 ../plugins/MatrixCwiseBinaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 ../plugins/ArrayCwiseBinaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ArrayWrapper.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ArrayWrapper.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Assign.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Assign.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/AssignEvaluator.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/AssignEvaluator.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Assign_MKL.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Assign_MKL.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/BandMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/BandMatrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Block.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Block.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/BooleanRedux.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/BooleanRedux.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CommaInitializer.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CommaInitializer.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ConditionEstimator.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ConditionEstimator.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CoreEvaluators.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CoreEvaluators.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CoreIterators.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CoreIterators.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseBinaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseBinaryOp.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseNullaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseNullaryOp.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseTernaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseTernaryOp.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseUnaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseUnaryOp.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseUnaryView.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/CwiseUnaryView.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseBase.h
 ../plugins/BlockMethods.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/BlockMethods.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/BlockMethods.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseCoeffsBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseCoeffsBase.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseStorage.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DenseStorage.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Diagonal.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Diagonal.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DiagonalMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DiagonalMatrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DiagonalProduct.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/DiagonalProduct.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Dot.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Dot.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/EigenBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/EigenBase.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Fuzzy.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Fuzzy.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GeneralProduct.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GeneralProduct.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GenericPacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GenericPacketMath.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GlobalFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/GlobalFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/IO.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/IO.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Inverse.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Inverse.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Map.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Map.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MapBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MapBase.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MathFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MathFunctionsImpl.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MathFunctionsImpl.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Matrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Matrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MatrixBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/MatrixBase.h
 ../plugins/CommonCwiseUnaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseUnaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseUnaryOps.h
 ../plugins/CommonCwiseBinaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseBinaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseBinaryOps.h
 ../plugins/MatrixCwiseUnaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 ../plugins/MatrixCwiseBinaryOps.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NestByValue.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NestByValue.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NoAlias.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NoAlias.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NumTraits.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/NumTraits.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/PermutationMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/PermutationMatrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/PlainObjectBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/PlainObjectBase.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Product.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Product.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ProductEvaluators.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ProductEvaluators.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Random.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Random.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Redux.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Redux.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Ref.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Ref.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Replicate.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Replicate.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ReturnByValue.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/ReturnByValue.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Reverse.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Reverse.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Select.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Select.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SelfAdjointView.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SelfAdjointView.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SelfCwiseBinaryOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SelfCwiseBinaryOp.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Solve.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Solve.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SolveTriangular.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SolveTriangular.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SolverBase.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/SolverBase.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/StableNorm.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/StableNorm.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Stride.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Stride.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Swap.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Swap.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Transpose.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Transpose.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Transpositions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Transpositions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/TriangularMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/TriangularMatrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/VectorBlock.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/VectorBlock.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/VectorwiseOp.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/VectorwiseOp.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Visitor.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/Visitor.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/Complex.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/MathFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/PacketMath.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/TypeCasting.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX/TypeCasting.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX512/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX512/MathFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX512/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AVX512/PacketMath.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/Complex.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/AltiVec/PacketMath.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/Complex.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/Half.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/Half.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/MathFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/PacketMath.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/PacketMathHalf.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/PacketMathHalf.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/TypeCasting.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/CUDA/TypeCasting.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/Default/Settings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/Default/Settings.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/Complex.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/MathFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/NEON/PacketMath.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/Complex.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/MathFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/PacketMath.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/TypeCasting.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/SSE/TypeCasting.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/Complex.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/Complex.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/MathFunctions.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/MathFunctions.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/PacketMath.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/arch/ZVector/PacketMath.h
 stdint.h
 -
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/AssignmentFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/AssignmentFunctors.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/BinaryFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/BinaryFunctors.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/NullaryFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/NullaryFunctors.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/StlFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/StlFunctors.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/TernaryFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/TernaryFunctors.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/UnaryFunctors.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/functors/UnaryFunctors.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixVector.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixVector.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/Parallelizer.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/Parallelizer.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixVector.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixVector.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointProduct.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointProduct.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointRank2Update.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/SelfadjointRank2Update.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixMatrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixVector.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixVector.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverMatrix.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverMatrix.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverVector.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/products/TriangularSolverVector.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/BlasUtil.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/BlasUtil.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Constants.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Constants.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/DisableStupidWarnings.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ForwardDeclarations.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ForwardDeclarations.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/MKL_support.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/MKL_support.h
 mkl.h
 -
 ../../misc/blas.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/blas.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/blas.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Macros.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Macros.h
 cstdlib
 -
 iostream
 -
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Memory.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Memory.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Meta.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/Meta.h
 cfloat
 -
 math_constants.h
@@ -716,37 +716,37 @@ math_constants.h
 cstdint
 -
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/ReenableStupidWarnings.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/StaticAssert.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/StaticAssert.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/XprHelper.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Core/util/XprHelper.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/BlockHouseholder.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/BlockHouseholder.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/Householder.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/Householder.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/HouseholderSequence.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Householder/HouseholderSequence.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Jacobi/Jacobi.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/Jacobi/Jacobi.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/ColPivHouseholderQR.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/ColPivHouseholderQR.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/CompleteOrthogonalDecomposition.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/CompleteOrthogonalDecomposition.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/FullPivHouseholderQR.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/FullPivHouseholderQR.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/HouseholderQR.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/HouseholderQR.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/HouseholderQR_LAPACKE.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/QR/HouseholderQR_LAPACKE.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/blas.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/blas.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke.h
 lapacke_config.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke_config.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke_config.h
 stdlib.h
 -
 complex.h
@@ -754,25 +754,25 @@ complex.h
 complex.h
 -
 lapacke_mangling.h
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke_mangling.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke_mangling.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke_mangling.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/misc/lapacke_mangling.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/ArrayCwiseUnaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/ArrayCwiseUnaryOps.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/BlockMethods.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/BlockMethods.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseBinaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseBinaryOps.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseUnaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/CommonCwiseUnaryOps.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-/home/berk/CarND-Path-Planning-Project/src/json.hpp
+/root/carnd-term3-project1-Path-Planning-Project/src/json.hpp
 algorithm
 -
 array
@@ -828,7 +828,7 @@ utility
 vector
 -
 
-/home/berk/CarND-Path-Planning-Project/src/main.cpp
+/root/carnd-term3-project1-Path-Planning-Project/src/main.cpp
 fstream
 -
 math.h
@@ -845,16 +845,18 @@ vector
 -
 typeinfo
 -
+algorithm
+-
 Eigen-3.3/Eigen/Core
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/Core
 Eigen-3.3/Eigen/QR
-/home/berk/CarND-Path-Planning-Project/src/Eigen-3.3/Eigen/QR
+/root/carnd-term3-project1-Path-Planning-Project/src/Eigen-3.3/Eigen/QR
 json.hpp
-/home/berk/CarND-Path-Planning-Project/src/json.hpp
+/root/carnd-term3-project1-Path-Planning-Project/src/json.hpp
 spline.h
-/home/berk/CarND-Path-Planning-Project/src/spline.h
+/root/carnd-term3-project1-Path-Planning-Project/src/spline.h
 
-/home/berk/CarND-Path-Planning-Project/src/spline.h
+/root/carnd-term3-project1-Path-Planning-Project/src/spline.h
 cstdio
 -
 cassert

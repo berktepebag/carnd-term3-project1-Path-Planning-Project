@@ -6,6 +6,7 @@
 #include <thread>
 #include <vector>
 #include <typeinfo>
+#include <algorithm>
 #include "Eigen-3.3/Eigen/Core"
 #include "Eigen-3.3/Eigen/QR"
 #include "json.hpp"
@@ -169,11 +170,17 @@ vector<double> getXY(double s, double d, const vector<double> &maps_s, const vec
 int lane = 1;
 int intended_lane = 1;
 
-double desired_speed = 5.0; //mile
+double desired_speed = 1.0; //mile
 bool changing_lane = false;
 bool safe_to_change = false;
 
+int counter = 0;
+int lane_change_counter = 0;
+
+vector<double> lane_costs(3, 0);
+
 int main() {
+
   uWS::Hub h;
 
   // Load up map values for waypoint's x,y,s and d normalized normal vectors
@@ -307,9 +314,10 @@ int main() {
           int forward_steps = 3;
           double step_dist = 30; //meter
 
+          vector<double> next_waypoint;
           for (int i = 1; i <= forward_steps; i++)
           {
-            vector<double> next_waypoint = getXY(car_s+step_dist*i, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y);
+            next_waypoint = getXY(car_s+step_dist*i, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y);
             ptsx.push_back(next_waypoint[0]);
             ptsy.push_back(next_waypoint[1]);
           }   
@@ -382,97 +390,241 @@ int main() {
             next_y_vals.push_back(y_point);
           }    
 
-          bool possible_front_collision_detected = false;
-          bool possible_back_collision_detected = false;
+          bool collision_detected = false;
+          bool slow_down = false;
+          //bool possible_back_collision_detected = false;
           
-          vector< vector<double> > other_cars;
+          vector< vector<double> > cars_in_range(1, vector<double>(7, 0.0));
+          vector< vector<double> > cars_in_intended_lane;
+
+
         //Check if our waypoints collide with another car!
-          for(int i = 0; i < sensor_fusion.size(); i++)
-          {              
-            other_cars.push_back(sensor_fusion[i]);
-            double other_cars_d = sensor_fusion[i][6];
 
-            //Are we in the same lane?
-            double dist_d = fabs(car_d - other_cars_d);
-
-            if(dist_d<0.5){        
-
-              double other_cars_s = sensor_fusion[i][5];
-              double dist = other_cars_s - car_s; //Make distance with the car infront positive           
-              //cout << "dist: " << dist << endl;   
-
-              if(dist>10 & dist<30){
-                possible_front_collision_detected = true;
-                //cout << "front collision detected to id: " << sensor_fusion[i] << endl;              
-              }else if(dist> -30 & dist < 0){
-                possible_back_collision_detected = true;
-                //cout << "back collision detected from id: " << sensor_fusion[i] << endl;   
-              }
-            }
-          }         
-
-          if (possible_front_collision_detected)
-          {
-            cout << "possible_front_collision_detected! changing_lane: " << changing_lane << endl;            
-            desired_speed -= 0.25;
-
-            if (!changing_lane)
-            {
-              safe_to_change = true;
-              cout << "safe_to_change: " << safe_to_change << endl;
-              //intended_lane = (lane+1)%3;
-
-              for(int i=0; i<other_cars.size(); i++){
-                //cout << "other cars: " << other_cars[i][0] << endl;    
-                double d_dist_ = fabs(other_cars[i][6]-(2+intended_lane*4));
-                double s_dist_ = fabs(other_cars[i][5] - car_s);       
-
-                //Do we have enough space to change lane? (All possible lanes)
-                if(s_dist_ > 3.0 & s_dist_ < 10.0){                                  
-
-                  //Is there any car at the intended lane?
-                  if(d_dist_ < 0.05){
-                    cout << "car at intended lane id: " <<other_cars[i][0] << " d_dist_: " << d_dist_ << " s_dist_: " << s_dist_ << endl;
-                    safe_to_change = true;
-                  }else{
-                    safe_to_change = false;
-                    //Try other lane!
-                    cout << "Intentded lane " << intended_lane <<" is not safe to change, trying lane: " << flush;
-                    intended_lane = (intended_lane+1)%3;
-                    cout << intended_lane << endl;
-                    
-                  }
-                }
-              }              
-              if(safe_to_change){
-                changing_lane = true;                
-              }            
-            }
-          }
-          else if(possible_back_collision_detected){
-            if(desired_speed<49.5){
-              desired_speed += 0.25;
-            }         
-          }
-          else if(desired_speed<49.5){
-            desired_speed += 0.25;
-          } 
-
-          //*****************************************//
-          //*******Check if changing lane completed***//
+          int forward_control_dist = 100;
           
-          if(fabs(car_d-(2+intended_lane*4)) > 0.05 & changing_lane == true){
-            lane = intended_lane;
-          }else if( (fabs(car_d-(2+intended_lane*4)) < 0.05) & (changing_lane == true) ){
-            cout << "Change lane completed" << endl;
-            intended_lane = lane;
-            changing_lane = false;
+          //***********Start counting other cars********************//
+          //Find the cars in control range, add them to the list
+          for(int i = 0; i < sensor_fusion.size(); i++)
+          { 
+            double other_cars_s = sensor_fusion[i][5];
+
+            double distance_btw_collider = other_cars_s - car_s; //Make distance with the car infront positive     
+            
+            if(distance_btw_collider < forward_control_dist & distance_btw_collider > -10){
+              cars_in_range.push_back(sensor_fusion[i]);             
+            }                     
+          } 
+          cout << "# cars in range: " << cars_in_range.size() << endl;
+          //***************End of counting other cars********************//      
+          vector<int> cars_in_lanes(3,0.0);
+          int cars_in_lane1 = 0;
+          int front_car_id = -1;
+
+
+          for (int i = 0; i < cars_in_range.size(); i++)
+          {
+            double d_dist = fabs(cars_in_range[i][6]-car_d);
+            double s_dist = cars_in_range[i][5]-car_s;
+            if (s_dist < 30 & s_dist > 0)
+            {
+              if (d_dist < 0.5)
+              {
+                slow_down = true;
+                front_car_id = i;
+
+              }              
+              double intended_lane_distance = fabs(cars_in_range[i][6]-(2+4*intended_lane));
+              //cout << "intended_lane_distance: " << intended_lane_distance << endl;
+              //cout << "lane!= intended_lane: " << (lane!=intended_lane) << endl;
+              if (intended_lane_distance < 0.5)
+              {                
+                //cout << "you are looking for this?" << endl;
+                cars_in_intended_lane.push_back(cars_in_range[i]);
+              }
+
+            }  
+
+            for(int j=0; j < 3; j++){
+              if ( fabs(cars_in_range[i][6]-(2+(4*j))) < 0.5 & s_dist < 20 & s_dist > -20)
+              {
+                  //cout << "cars_in_lanes" << endl;
+                cars_in_lanes[j] += 1;
+              }              
+            }          
+            //*******************************//
+            //*********Calculate Lane Costs*************//
+            //Calculate other cars speed
+            double other_car_speed = sqrt(pow(cars_in_range[i][3],2)+pow(cars_in_range[i][4],2));
+            double lane_cost_by_car_in_range = log(forward_control_dist-s_dist);
+
+            if (s_dist < 5 & d_dist < 5)
+            {
+              lane_cost_by_car_in_range *= 2;
+            }            
+            double total_lane_cost = lane_cost_by_car_in_range / other_car_speed;
+
+            //pow((forward_control_dist - s_dist),2)
+
+            if (cars_in_range[i][6] > 0 & cars_in_range[i][6] < 4)
+            {
+              lane_costs[0] += total_lane_cost;
+            }else if(cars_in_range[i][6] > 4 & cars_in_range[i][6] < 8){
+              lane_costs[1] += total_lane_cost;
+            }else if(cars_in_range[i][6] > 8 & cars_in_range[i][6] < 12){
+              lane_costs[2] += total_lane_cost;
+            }        
+
+          //*******End Of Cost Calculation*************//
           }
-          //cout << "desired_speed: " << desired_speed << endl;
-          cout << "lane: " << lane << endl;
-          cout << "intended lane: " << intended_lane << endl;  
-          cout << "changing_lane: " << changing_lane << endl;
-          cout << "**********************************" << endl;
+          cout << "cars_in_intended_lane.size(): " << cars_in_intended_lane.size() << endl;
+
+          counter++;
+          int car_speed_int = car_speed;
+          if (counter%10 == 0)
+          {
+            for(int i = 0; i < lane_costs.size(); i++){
+              lane_costs[i] /= 2.0;
+              if(lane_costs[i] < 0.1) lane_costs[i] = 0;
+
+            }
+          }
+          //
+          cout << "counter: " << counter << endl;
+          
+          
+          //********************************************//
+          //************Lane Decision by Cost Begins***********//
+
+          //**********Find lane with min cost*************//
+          int min_pos = 0;  
+          for(int i=0; i < lane_costs.size(); i++){
+            if(lane_costs[i]< lane_costs[min_pos]) min_pos = i;            
+          }
+          
+
+          //***********Take Decision according to the costs calculated********************//
+          if(counter % 50 == 0){
+            intended_lane = min_pos;
+
+            if (lane == 2 & intended_lane == 1)
+            {
+              if (cars_in_lanes[1] == 0)
+              {
+                intended_lane = 1;
+              }else{intended_lane = lane;}
+            }
+            else if(lane == 1 & intended_lane == 2){
+              if (cars_in_lanes[2] == 0)
+              {
+                intended_lane = 2;
+              }else{intended_lane=lane;}
+            }
+            else if(lane == 1 & intended_lane == 0){
+              if (cars_in_lanes[0] == 0)
+              {
+                intended_lane = 0;
+              }else{intended_lane=lane;}
+            }
+            else if(lane == 0 & intended_lane == 1){
+              if (cars_in_lanes[1] == 0)
+              {
+                intended_lane = 1;
+              }else{intended_lane=lane;}
+            }          
+            else if (lane == 0 & intended_lane==2)
+            {
+              cout << "*********Two Lane Movement!***********" << endl;
+              if (cars_in_lanes[1] == 0)
+              {
+                intended_lane = 1;
+              }else{
+                intended_lane = lane;}
+              }
+            else if (lane == 2 & intended_lane==0)
+            {
+              cout << "*********Two Lane Movement!***********" << endl;
+              if (cars_in_lanes[1] == 0)
+              {
+                intended_lane = 1;
+              }else{
+                intended_lane = lane;}
+            }
+
+            else{intended_lane = lane;}
+
+
+            lane = intended_lane;
+            }
+          /*
+          if(fabs((2+4*intended_lane)-car_d) > 0.2){
+            if ((lane == 0 || lane == 2) & intended_lane != 1)//(intended_lane-lane > 1 || intended_lane - lane < -1) //
+            {
+              cout << "case lane1" << endl;
+              if (cars_in_lane1 == 0)
+              {
+                cout << "lets move" << endl;
+                //intended_lane = 1;
+                intended_lane = 1;
+              }else{
+                cout << "lets stay here" << endl;
+                intended_lane=lane;              
+              }           
+              
+            }
+            else if(cars_in_intended_lane.size() != 0)// & car_speed < 35.0)
+            {
+              intended_lane = lane;
+              cout << "case intended_lane" << endl;
+            }          
+
+            lane = intended_lane;
+          }
+          */
+
+              for (int i = 0; i < lane_costs.size(); i++)
+              {
+                cout << "lane cost["<<i<<"] cost: " << lane_costs[i] << endl;
+              }
+              for (int i = 0; i < cars_in_lanes.size(); i++)
+              {
+                cout << "cars in lanes["<<i<<"]: " << cars_in_lanes[i] << endl;
+              }
+
+          //********************************************//
+          //************Lane Decision by Cost Ends***********//
+
+              if (counter%1 == 0)
+              {
+           //cout << "changing_lane: " << changing_lane << endl;
+               cout << "****** intended_lane: " << intended_lane << endl;
+          cout << "//**********************************//" << endl;
+             }
+
+
+
+          if (slow_down)// & car_speed > front_car_speed)// || (fabs(car_d-(2+4*intended_lane)) > 0.5 & desired_speed >= 30.0))
+          {
+            double front_car_speed = sqrt(pow(cars_in_range[front_car_id][3],2)+pow(cars_in_range[front_car_id][4],2));
+            if (car_speed > front_car_speed)
+            {
+              cout << "front_car_speed: " << front_car_speed << endl;
+              desired_speed -= .125;
+            }
+            
+          }
+          else if (desired_speed < 49.5)
+          {
+            desired_speed += .254;
+          }
+
+/*
+          for (int i = 0; i < cars_in_range.size(); i++)
+          {
+           cout << "cars in range: " << cars_in_range.size() << endl;
+         }   
+         */
+
+
 
 
 

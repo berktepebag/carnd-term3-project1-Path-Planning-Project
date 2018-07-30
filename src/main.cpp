@@ -171,11 +171,13 @@ int lane = 1;
 int intended_lane = 1;
 
 double desired_speed = 1.0; //mile
-bool changing_lane = false;
-bool safe_to_change = false;
 
+bool safe_to_change = false;
+bool changing_lane = false;
 int counter = 0;
 int lane_change_counter = 0;
+
+int next_move_counter = 0;
 
 vector<double> lane_costs(3, 0);
 
@@ -313,17 +315,24 @@ int main() {
 
           int forward_steps = 3;
           double step_dist = 30; //meter
-
+          
           vector<double> next_waypoint;
           for (int i = 1; i <= forward_steps; i++)
-          {
+          {            
             next_waypoint = getXY(car_s+step_dist*i, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y);
             ptsx.push_back(next_waypoint[0]);
             ptsy.push_back(next_waypoint[1]);
           }   
+          
+          /*
+          ptsx.push_back(getXY(car_s+30, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[0]);
+          ptsx.push_back(getXY(car_s+60, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[0]);
+          ptsx.push_back(getXY(car_s+90, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[0]);
 
-          //ptsx: 5 
-          //cout << "ptsx size: " << ptsx.size() << endl;
+          ptsy.push_back(getXY(car_s+30, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[1]);
+          ptsy.push_back(getXY(car_s+60, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[1]);
+          ptsy.push_back(getXY(car_s+90, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[1]);
+          */
 
           //Shifting car reference angle to 0!
           for (int i = 0; i < ptsx.size(); i++)
@@ -499,11 +508,17 @@ int main() {
           int min_pos = 0;  
           for(int i=0; i < lane_costs.size(); i++){
             if(lane_costs[i]< lane_costs[min_pos]) min_pos = i;            
-          }
+          }          
+
           
 
           //***********Take Decision according to the costs calculated********************//
-          if(counter % 50 == 0){
+          //Avoid lane change first 200 frames, and decide change lane every 50 frames (50*20 milisec = 1 sec)
+          if(counter > 200 & counter % 50 == 0){ 
+            changing_lane = false;
+            //Decide but not move until next_move_counter satisfied
+            next_move_counter = counter + 10;
+
             intended_lane = min_pos;
 
             if (lane == 2 & intended_lane == 1)
@@ -552,10 +567,28 @@ int main() {
 
             else{intended_lane = lane;}
 
-
-            lane = intended_lane;
+              if (intended_lane != lane)
+              {
+                changing_lane = true;
+              }            
             }
-       
+
+            if (next_move_counter>counter)
+            {
+              cout << "Until Next Move: " << next_move_counter-counter <<endl;
+            }
+            if (counter == next_move_counter & car_speed < 35.0)
+            {
+              lane = intended_lane;
+            }
+            /*
+            
+            if (counter > 200 & fabs((2+(4*intended_lane))-car_d)> 0.1)
+            {
+              changing_lane = true;
+            }
+            
+            /*
             for (int i = 0; i < lane_costs.size(); i++)
             {
               cout << "lane cost["<<i<<"] cost: " << lane_costs[i] << endl;
@@ -564,18 +597,19 @@ int main() {
             {
               cout << "cars in lanes["<<i<<"]: " << cars_in_lanes[i] << endl;
             }
+            */
 
           //********************************************//
           //************Lane Decision by Cost Ends***********//
 
-            if (counter%10 == 0)
+            if (counter%1 == 0)
               {
-           //cout << "changing_lane: " << changing_lane << endl;
+                cout << "changing_lane: " << changing_lane << endl;
                 cout << "****** intended_lane: " << intended_lane << endl;
                 cout << "//**********************************//" << endl;
              }
 
-
+          //************* Acceleration, Deacceleration Start**************//
           if (slow_down)
           {
             double front_car_speed = sqrt(pow(cars_in_range[front_car_id][3],2)+pow(cars_in_range[front_car_id][4],2));
@@ -585,27 +619,17 @@ int main() {
               double ratio = cars_in_range[front_car_id][5]-car_s;
               desired_speed -= 10/ratio;
             }            
-          }
-          else if (desired_speed < 49.5)
+          }   
+          else if (changing_lane & car_speed > 35.0)
+          {
+            desired_speed -= 0.254;
+          }   
+          else if (desired_speed < 49.5 & !changing_lane)
           {
             desired_speed += .254;
           }
 
-/*
-          for (int i = 0; i < cars_in_range.size(); i++)
-          {
-           cout << "cars in range: " << cars_in_range.size() << endl;
-         }   
-         */
-
-
-
-
-
-
-
-
-
+          //************* Acceleration, Deacceleration Ends**************//
 
 
           // TODO: define a path made up of (x,y) points that the car will visit sequentially every .02 seconds

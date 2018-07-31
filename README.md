@@ -131,13 +131,13 @@ If the distance between ego car and the front vehicle is less than 30 meters, eg
 ## Car in Action
 
 ### Changing Lane and multi lane
-<iframe width="560" height="315" src="https://www.youtube.com/embed/suFSNMBu-yY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![Changing Lane and multi lane](https://img.youtube.com/vi/suFSNMBu-yY/0.jpg)](https://www.youtube.com/watch?v=suFSNMBu-yY)
 
 ### Changing multi lane and passing slow vehicles
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TSTecPE9ayE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![Changing multi lane and passing slow vehicles](https://img.youtube.com/vi/TSTecPE9ayE/0.jpg)](https://www.youtube.com/watch?v=TSTecPE9ayE)
 
 ### Changing lane, multi lane and passing slow vehicles
-<iframe width="560" height="315" src="https://www.youtube.com/embed/loIlbXS3qIg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![Changing lane, multi lane and passing slow vehicles](https://img.youtube.com/vi/loIlbXS3qIg/0.jpg)](https://www.youtube.com/watch?v=loIlbXS3qIg)
 
 ### Finding fastest lane and passing slow vehicles
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4vyjbcUS4CQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![Finding fastest lane and passing slow vehicles](https://img.youtube.com/vi/4vyjbcUS4CQ/0.jpg)](https://www.youtube.com/watch?v=4vyjbcUS4CQ)

@@ -8,7 +8,7 @@ You can download the Term3 Simulator which contains the Path Planning Project fr
 
 ### Important Note!
 
-Due to development procedure, decisions are related to the FPS (counter variable). During my controls at two different computers, discover a problem when FPS is higher than 60 which causes change in behaviour of the car. In an industrial enviroment, amount of data per second would be standardized. To prevent simulator from acting unexpected at different computers use a FPS limiter and set it to 60. You can use  <a href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html"> Riva Tuner Statistics Server </a> to limit FPS. This is open to development, <ctime> can be used for a better standardisation but since communication between simulator and C++ is dependent on computing power, this will also need some tuning. 
+Due to development procedure, decisions are related to the FPS (counter variable). During my controls at two different computers, discover a problem. When FPS is higher than 60, it causes change in behaviour of the car. In an industrial enviroment, amount of data per second would be standardized. To prevent simulator from acting unexpected at different computers use a FPS limiter and set it to 60. You can use  <a href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html"> Riva Tuner Statistics Server </a> to limit FPS. This is open to development, <ctime> can be used for a better standardisation but since communication between simulator and C++ is dependent on computing power, this will also need some tuning. 
 
 ### Goals
 In this project your goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. You will be provided the car's localization and sensor fusion data, there is also a sparse map list of waypoints around the highway. The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. The car should avoid hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. The car should be able to make one complete loop around the 6946m highway. Since the car is trying to go 50 MPH, it should take a little over 5 minutes to complete 1 loop. Also the car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3.
@@ -76,6 +76,30 @@ To calculate next x,y steps we will use polynomials. Since the x,y and yaw angle
 
 ## Creating Spline Points
 
+spline.h is a good one header file which can easily calculate polynomials and can be used with previously calculated x,y steps. 
+   tk::spline s;
+   s.set_points(ptsx,ptsy,true); will return the polynomial. Gather previous_path_x and previous_path_y  information from the simulator and fill next_x_vals and next_y_vals with it. For the amount of steps missing in next_x/y_vals add from newly calculated spline points. 
+   
+## Lane Cost Functions
 
+The system is developed on lane costs. Variables are, 
+1. Distance between the ego car and the other vehicle in control distance (and if the other vehicle is in close range, s < 5m and d < 5m double the cost)
+2. Speed of the other vehicle
+3. Total cost of a vehicle = distance / speed
 
+#### Fast&Further!
+
+Since having 3 fast cars in a lane is better than having a slow car in a lane, our algorithm favors vehicles which are faster and further. That is why distance is divided by the speed of the vehicle.
+
+## Counting the vehicles
+
+Since highways are crowded most of the time, sensor fusion data can also be crowded. Since we do not need all the vehicles on the road, we must decide where to look. It will look for 100 meters ahead and 10 meters back.
+
+<img width="800" alt="N = 20 dt = 0.2" src="/imgs/MPC.JPG">
+
+## Vehicles in the lanes
+
+Since knowing where the other vehicles positions is crucial also knowing their lane will helps us changing lanes safely.
+
+## 
 

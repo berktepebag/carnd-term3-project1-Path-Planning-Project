@@ -8,7 +8,7 @@ You can download the Term3 Simulator which contains the Path Planning Project fr
 
 ### Important Note!
 
-Due to development procedure, decisions are related to the FPS (counter variable). During my controls at two different computers, discover a problem. When FPS is higher than 60, it causes change in behaviour of the car. In an industrial enviroment, amount of data per second would be standardized. To prevent simulator from acting unexpected at different computers use a FPS limiter and set it to 60. You can use  <a href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html"> Riva Tuner Statistics Server </a> to limit FPS. This is open to development, <ctime> can be used for a better standardisation but since communication between simulator and C++ is dependent on computing power, this will also need some tuning. 
+Due to development procedure, decisions are related to the FPS (counter variable). During my controls at two different computers, have discovered a problem. When FPS is higher than 60, it causes change in behaviour of the car. In an industrial enviroment, amount of data per second would be standardized. To prevent simulator from acting unexpected at different computers use a FPS limiter and set it to 60. You can use  <a href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html"> Riva Tuner Statistics Server </a> to limit FPS. This is open to development, <ctime> can be used for a better standardisation but since communication between simulator and C++ is dependent on computing power, this will also need some tuning. 
 
 ### Goals
 In this project your goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. You will be provided the car's localization and sensor fusion data, there is also a sparse map list of waypoints around the highway. The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. The car should avoid hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. The car should be able to make one complete loop around the 6946m highway. Since the car is trying to go 50 MPH, it should take a little over 5 minutes to complete 1 loop. Also the car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3.
@@ -101,5 +101,24 @@ Since highways are crowded most of the time, sensor fusion data can also be crow
 
 Since knowing where the other vehicles positions is crucial also knowing their lane will helps us changing lanes safely.
 
-## 
+## Decreasing the lane costs over time
 
+If lane_costs vector created outside of the loop and is set zero for each time, calculated costs will be exact moments costs. The logic will then tell the car to change lane according to minimum lane cost, which causes jerk. Instead for every frame lane costs are summed with new lane costs and for every 10 frames divided by 2. So if there is no vehicle left in the lane, the ego car would not suddenly change lane but will wait until empty lane reaches smallest lane cost.   
+
+## Deciding best lane according to the costs
+
+A for loop handles the finding minimum lane cost. Then an if-else statement will handle the situation according to min-lane-cost and safety of the intended lane. If there is no car in 20 meters range the car will move to the lane. Else stays and starts calculating the costs again.
+
+## Jerk and Acceleration
+
+Sudden lane changes creates high jerks and acceleration which is not comfortable passengers. To prevent this and if statement checks if time (counter) has come and speed is lower than 37.0 mph. Higher speeds causes a trigger in jerk/accelearation. 
+
+## Distance with the vehicle
+
+If the distance between ego car and the front vehicle is less than 30 meters, ego car will slow down with an ratio of 10/(distance between two vehicles) and will keep the distance.
+
+## Known problems
+
+1. Due to nature of lane changing algorithm, sometimes ego vehicle finds changing two lines in once is the best option. In if-else statement checking multi lane changes and forcing ego car to move to next lane first and then if it is still the best option move to first intended lane. But sometimes this happens so fast (FPS limiter!) that ego car will execute commands from last time (previous_path_x,y) and due to slowing while changing lanes a vehicle can appear at the intended lane. Most of the times code catches the other vehicle and returns back to it's lane and it causes jerk/acceleration over limit.  
+
+2. Some turns causes s and d to be mis-calculated which creates problems with following the vehicle in front. Since using radar and UKF will fix this problem, it will be accepted as known and not worth fixing since it happens very few times. 

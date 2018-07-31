@@ -95,7 +95,7 @@ Since having 3 fast cars in a lane is better than having a slow car in a lane, o
 
 Since highways are crowded most of the time, sensor fusion data can also be crowded. Since we do not need all the vehicles on the road, we must decide where to look. It will look for 100 meters ahead and 10 meters back.
 
-<img width="800" alt="N = 20 dt = 0.2" src="/imgs/MPC.JPG">
+<img width="800" alt="Counting other vehicles" src="/imgs/counting_cars.jpg">
 
 ## Vehicles in the lanes
 
@@ -109,6 +109,8 @@ If lane_costs vector created outside of the loop and is set zero for each time, 
 
 A for loop handles the finding minimum lane cost. Then an if-else statement will handle the situation according to min-lane-cost and safety of the intended lane. If there is no car in 20 meters range the car will move to the lane. Else stays and starts calculating the costs again.
 
+<img width="800" alt="Counting other vehicles" src="/imgs/finding_the_best_lane.JPG">
+
 ## Jerk and Acceleration
 
 Sudden lane changes creates high jerks and acceleration which is not comfortable passengers. To prevent this and if statement checks if time (counter) has come and speed is lower than 37.0 mph. Higher speeds causes a trigger in jerk/accelearation. 
@@ -121,4 +123,21 @@ If the distance between ego car and the front vehicle is less than 30 meters, eg
 
 1. Due to nature of lane changing algorithm, sometimes ego vehicle finds changing two lines in once is the best option. In if-else statement checking multi lane changes and forcing ego car to move to next lane first and then if it is still the best option move to first intended lane. But sometimes this happens so fast (FPS limiter!) that ego car will execute commands from last time (previous_path_x,y) and due to slowing while changing lanes a vehicle can appear at the intended lane. Most of the times code catches the other vehicle and returns back to it's lane and it causes jerk/acceleration over limit.  
 
+<img width="800" alt="Counting other vehicles" src="/imgs/finding_the_best_lane_multi_lane_movement.JPG">
+
+
 2. Some turns causes s and d to be mis-calculated which creates problems with following the vehicle in front. Since using radar and UKF will fix this problem, it will be accepted as known and not worth fixing since it happens very few times. 
+
+## Car in Action
+
+### Changing Lane and multi lane
+<iframe width="560" height="315" src="https://www.youtube.com/embed/suFSNMBu-yY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+### Changing multi lane and passing slow vehicles
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSTecPE9ayE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+### Changing lane, multi lane and passing slow vehicles
+<iframe width="560" height="315" src="https://www.youtube.com/embed/loIlbXS3qIg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+### Finding fastest lane and passing slow vehicles
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4vyjbcUS4CQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

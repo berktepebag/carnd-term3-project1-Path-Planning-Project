@@ -126,6 +126,6 @@ If the distance between ego car and the front vehicle is less than 30 meters, eg
 
 ## Car in Action
 
-### 10 Miles Run Without Incident
-https://www.youtube.com/watch?v=WrDXzFpHefw&feature=youtu.be
+
+<a href="https://www.youtube.com/watch?v=WrDXzFpHefw&feature=youtu.be" target="_blank"> 10 Miles Run Without Incident </a>
 

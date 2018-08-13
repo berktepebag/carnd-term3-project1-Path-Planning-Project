@@ -113,16 +113,11 @@ Sudden lane changes creates high jerks and acceleration which is not comfortable
 
 ## Distance with the vehicle
 
-If the distance between ego car and the front vehicle is less than 30 meters, ego car will slow down with an ratio of 10/(distance between two vehicles) and will keep the distance.
+If the distance between ego car and the front vehicle is less than 30 meters, ego car will slow down with an ratio of 8/(distance between two vehicles) and will keep the distance.
 
 ## Known problems
 
-1. Due to nature of lane changing algorithm, sometimes ego vehicle finds changing two lines in once is the best option. In if-else statement checking multi lane changes and forcing ego car to move to next lane first and then if it is still the best option move to first intended lane. But sometimes this happens so fast (FPS limiter!) that ego car will execute commands from last time (previous_path_x,y) and due to slowing while changing lanes a vehicle can appear at the intended lane. Most of the times code catches the other vehicle and returns back to it's lane and it causes jerk/acceleration over limit.  
-
-<img width="800" alt="Counting other vehicles" src="/imgs/finding_the_best_lane_multi_lane_movement.JPG">
-
-
-2. Some turns causes s and d to be mis-calculated which creates problems with following the vehicle in front. Since using radar and UKF will fix this problem, it will be accepted as known and not worth fixing since it happens very few times. 
+1. Some turns causes s and d to be mis-calculated which creates problems with following the vehicle in front. Since using radar and UKF will fix this problem, it will be accepted as known and not worth fixing since it happens very few times. 
 
 ## Car in Action
 

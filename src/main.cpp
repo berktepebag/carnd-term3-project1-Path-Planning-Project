@@ -313,8 +313,16 @@ int main() {
 
           //int lane = 1; //0 left, 1 mid, 2 right
 
+          //If car is faster than 30 mile/hour increase the move distance for smoother move and less jerk
           int forward_steps = 3;
-          double step_dist = 30; //meter
+          double step_dist = 0; //meter
+
+          if (car_speed <= 30)
+          {
+            step_dist = 30;
+          }else{
+            step_dist = car_speed;
+          }
           
           vector<double> next_waypoint;
           for (int i = 1; i <= forward_steps; i++)
@@ -323,17 +331,7 @@ int main() {
             ptsx.push_back(next_waypoint[0]);
             ptsy.push_back(next_waypoint[1]);
           }   
-          
-          /*
-          ptsx.push_back(getXY(car_s+30, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[0]);
-          ptsx.push_back(getXY(car_s+60, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[0]);
-          ptsx.push_back(getXY(car_s+90, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[0]);
-
-          ptsy.push_back(getXY(car_s+30, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[1]);
-          ptsy.push_back(getXY(car_s+60, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[1]);
-          ptsy.push_back(getXY(car_s+90, (2+4*lane), map_waypoints_s, map_waypoints_x, map_waypoints_y)[1]);
-          */
-
+                 
           //Shifting car reference angle to 0!
           for (int i = 0; i < ptsx.size(); i++)
           {
@@ -451,7 +449,7 @@ int main() {
                 cars_in_intended_lane.push_back(cars_in_range[i]);
               }
 
-            }  
+            }
 
             for(int j=0; j < 3; j++){
               if ( fabs(cars_in_range[i][6]-(2+(4*j))) < 0.5 & s_dist < 20 & s_dist > -20)
@@ -505,107 +503,36 @@ int main() {
           //************Lane Decision by Cost Begins***********//
 
           //**********Find lane with min cost*************//
-          int min_pos = 0;  
+
+           //Wait till next move, or if we haven't moved for a long time move
+          int next_move_step = 100;
+
           for(int i=0; i < lane_costs.size(); i++){
-            if(lane_costs[i]< lane_costs[min_pos]) min_pos = i;            
-          }          
-
-          
-          int take_decisions = 20;
-          //***********Take Decision according to the costs calculated********************//
-          //Avoid lane change first 200 frames, and decide changing lane every take_decisionsx20 milisec
-          if(counter > 200 & counter % take_decisions == 0){ 
-            changing_lane = false;
-            //Decide but not move until next_move_counter satisfied
-            next_move_counter = counter + 2;
-
-            intended_lane = min_pos;
-
-            if (lane == 2 & intended_lane == 1)
-            {
-              if (cars_in_lanes[1] == 0)
+            cout << "Lane[" <<i<<"] cost: " << lane_costs[i] << endl;
+            if (lane_costs[i] < lane_costs[lane] & 
+              (counter == next_move_counter || (next_move_counter-counter)< -next_move_step))
+            {         
+              if (fabs(lane-i)<=1 & cars_in_lanes[i] == 0)
               {
-                intended_lane = 1;
-              }else{intended_lane = lane;}
-            }
-            else if(lane == 1 & intended_lane == 2){
-              if (cars_in_lanes[2] == 0)
-              {
-                intended_lane = 2;
-              }else{intended_lane=lane;}
-            }
-            else if(lane == 1 & intended_lane == 0){
-              if (cars_in_lanes[0] == 0)
-              {
-                intended_lane = 0;
-              }else{intended_lane=lane;}
-            }
-            else if(lane == 0 & intended_lane == 1){
-              if (cars_in_lanes[1] == 0)
-              {
-                intended_lane = 1;
-              }else{intended_lane=lane;}
-            }          
-            else if (lane == 0 & intended_lane==2)
-            {
-              cout << "*********Two Lane Movement!***********" << endl;
-              if (cars_in_lanes[1] == 0)
-              {
-                intended_lane = 1;                
-              }else{
-                intended_lane = lane;}
-              }
-            else if (lane == 2 & intended_lane==0)
-            {
-              cout << "*********Two Lane Movement!***********" << endl;
-              if (cars_in_lanes[1] == 0)
-              {
-                intended_lane = 1;                
-              }else{
-                intended_lane = lane;}
-            }
+               lane = i;                
+             }    
+             else if((lane_costs[1] < lane_costs[lane])& cars_in_lanes[1] == 0){
+              lane = 1;
+             }
+             next_move_counter = counter + next_move_step;
 
-            else{intended_lane = lane;}
-
-              if (intended_lane != lane)
-              {
-                changing_lane = true;
-              }            
-            }
-
-            if (next_move_counter>counter)
-            {
-              cout << "Until Next Move: " << next_move_counter-counter <<endl;
-            }
-            if (counter == next_move_counter & car_speed < 37.0)
-            {
-              lane = intended_lane;
-            }
-            /*
-            
-            if (counter > 200 & fabs((2+(4*intended_lane))-car_d)> 0.1)
-            {
-              changing_lane = true;
-            }
-            
-            /*
-            for (int i = 0; i < lane_costs.size(); i++)
-            {
-              cout << "lane cost["<<i<<"] cost: " << lane_costs[i] << endl;
-            }
-            for (int i = 0; i < cars_in_lanes.size(); i++)
-            {
-              cout << "cars in lanes["<<i<<"]: " << cars_in_lanes[i] << endl;
-            }
-            */
-
+           }           
+         }    
+  
           //********************************************//
           //************Lane Decision by Cost Ends***********//
 
             if (counter%1 == 0)
               {
-                cout << "changing_lane: " << changing_lane << endl;
-                cout << "****** intended_lane: " << intended_lane << endl;
+                cout << "Counter/next_move_counter: " <<counter << " / " <<next_move_counter << endl;
+                cout << "Till next move: " << next_move_counter-counter << endl;
+                //cout << "changing_lane: " << changing_lane << endl;
+                cout << "****** intended_lane: " << lane << endl;
                 cout << "//**********************************//" << endl;
              }
 
@@ -619,12 +546,8 @@ int main() {
               double ratio = cars_in_range[front_car_id][5]-car_s;
               desired_speed -= 10/ratio;
             }            
-          }   
-          else if (changing_lane & car_speed > 37.0)
-          {
-            desired_speed -= 0.254;
-          }   
-          else if (desired_speed < 49.5 & !changing_lane)
+          }    
+          else if (desired_speed < 49.5)
           {
             desired_speed += .254;
           }

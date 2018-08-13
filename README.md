@@ -6,10 +6,6 @@ Self-Driving Car Engineer Nanodegree Program Term 3 Project 1
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
 
-### Important Note!
-
-Due to development procedure, decisions are related to the FPS (counter variable). During my controls at two different computers, have discovered a problem. When FPS is higher than 60, it causes change in behaviour of the car. In an industrial enviroment, amount of data per second would be standardized. To prevent simulator from acting unexpected at different computers use a FPS limiter and set it to 60. You can use  <a href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html"> Riva Tuner Statistics Server </a> to limit FPS. This is open to development, <ctime> can be used for a better standardisation but since communication between simulator and C++ is dependent on computing power, this will also need some tuning. 
-
 ### Goals
 In this project your goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. You will be provided the car's localization and sensor fusion data, there is also a sparse map list of waypoints around the highway. The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. The car should avoid hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. The car should be able to make one complete loop around the 6946m highway. Since the car is trying to go 50 MPH, it should take a little over 5 minutes to complete 1 loop. Also the car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3.
 
@@ -107,7 +103,7 @@ If lane_costs vector created outside of the loop and is set zero for each time, 
 
 ## Deciding best lane according to the costs
 
-A for loop handles the finding minimum lane cost. Then an if-else statement will handle the situation according to min-lane-cost and safety of the intended lane. If there is no car in 20 meters range the car will move to the lane. Else stays and starts calculating the costs again.
+A for loop handles the finding minimum lane cost. Another for loop will handle the situation according to min-lane-cost and safety of the intended lane. If there is no car in 20 meters range the car will move to the lane. Else stays and starts calculating the costs again.
 
 <img width="800" alt="Counting other vehicles" src="/imgs/finding_the_best_lane.JPG">
 
@@ -130,14 +126,6 @@ If the distance between ego car and the front vehicle is less than 30 meters, eg
 
 ## Car in Action
 
-### Changing Lane and multi lane
-[![Changing Lane and multi lane](https://img.youtube.com/vi/suFSNMBu-yY/0.jpg)](https://www.youtube.com/watch?v=suFSNMBu-yY)
+### 10 Miles Run Without Incident
+https://www.youtube.com/watch?v=WrDXzFpHefw&feature=youtu.be
 
-### Changing multi lane and passing slow vehicles
-[![Changing multi lane and passing slow vehicles](https://img.youtube.com/vi/TSTecPE9ayE/0.jpg)](https://www.youtube.com/watch?v=TSTecPE9ayE)
-
-### Changing lane, multi lane and passing slow vehicles
-[![Changing lane, multi lane and passing slow vehicles](https://img.youtube.com/vi/loIlbXS3qIg/0.jpg)](https://www.youtube.com/watch?v=loIlbXS3qIg)
-
-### Finding fastest lane and passing slow vehicles
-[![Finding fastest lane and passing slow vehicles](https://img.youtube.com/vi/4vyjbcUS4CQ/0.jpg)](https://www.youtube.com/watch?v=4vyjbcUS4CQ)

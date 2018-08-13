@@ -432,9 +432,9 @@ int main() {
           {
             double d_dist = fabs(cars_in_range[i][6]-car_d);
             double s_dist = cars_in_range[i][5]-car_s;
-            if (s_dist < 30 & s_dist > 0)
+            if (s_dist < 40 & s_dist > 0)
             {
-              if (d_dist < 0.5)
+              if (d_dist < 1.0)
               {
                 slow_down = true;
                 front_car_id = i;
@@ -452,7 +452,7 @@ int main() {
             }
 
             for(int j=0; j < 3; j++){
-              if ( fabs(cars_in_range[i][6]-(2+(4*j))) < 0.5 & s_dist < 20 & s_dist > -20)
+              if ( fabs(cars_in_range[i][6]-(2+(4*j))) < 1.0 & s_dist < 20 & s_dist > -20)
               {
                   //cout << "cars_in_lanes" << endl;
                 cars_in_lanes[j] += 1;
@@ -482,8 +482,7 @@ int main() {
             }        
 
           //*******End Of Cost Calculation*************//
-          }
-          cout << "cars_in_intended_lane.size(): " << cars_in_intended_lane.size() << endl;
+          }          
 
           counter++;
           int car_speed_int = car_speed;
@@ -505,7 +504,7 @@ int main() {
           //**********Find lane with min cost*************//
 
            //Wait till next move, or if we haven't moved for a long time move
-          int next_move_step = 100;
+          int next_move_step = 150;
 
           for(int i=0; i < lane_costs.size(); i++){
             cout << "Lane[" <<i<<"] cost: " << lane_costs[i] << endl;
@@ -529,8 +528,8 @@ int main() {
 
             if (counter%1 == 0)
               {
-                cout << "Counter/next_move_counter: " <<counter << " / " <<next_move_counter << endl;
-                cout << "Till next move: " << next_move_counter-counter << endl;
+                cout << "Counter/next_move_counter: " <<counter << " / " << next_move_counter << endl;
+                cout << "Till next move: " << next_move_counter - counter << endl;
                 //cout << "changing_lane: " << changing_lane << endl;
                 cout << "****** intended_lane: " << lane << endl;
                 cout << "//**********************************//" << endl;
@@ -544,7 +543,7 @@ int main() {
             {
               cout << "front_car_speed: " << front_car_speed << endl;
               double ratio = cars_in_range[front_car_id][5]-car_s;
-              desired_speed -= 10/ratio;
+              desired_speed -= 8/ratio;
             }            
           }    
           else if (desired_speed < 49.5)

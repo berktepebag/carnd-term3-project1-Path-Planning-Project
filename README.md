@@ -1,3 +1,5 @@
+### *** Archieved: As this repo is and will not updated anymore, it is archieved. ***
+
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program Term 3 Project 1
 
